@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;1,200&family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,300;1,100;1,300&family=Ubuntu+Mono:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-transform: capitalize;
+    transition: all .2s;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+}
+/* variables strt   */
+
+:root{
+--green:green;
+--black:#130f40;
+--light-color:#666;
+--box-shadow:0 .1rem .7rem rgba(0,0,0.1);
+--border: 2rem solid rgba(0,0,0.1);
+--outline: .1rem solid rgba(0,0,0.1);
+}
+html{
+    font-size: 94%;
+}
+
+/* variables end  */
+/* utility classes strt  */
+.btn{
+    color: var(--black);
+    margin-top: 1rem;
+    padding: 5px;
+    border: 1px solid var(--light-color);
+    font-size: 17px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.btn:hover{
+    color: white;
+    background-color:var(--green);
+}
+/* utility classes end  */
+
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+scroll-padding-top: 7rem;
+}
+body{
+    background-color: #eee;
+}
+
+/* header :start */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+display: flex;
+align-items: center;
+background-color: white;
+justify-content: space-between;
+padding: 1.5rem 9%;
+box-shadow: var(--box-shadow);
+}
+.header .logo{
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+.header .logo i{
+    color: var(--green);
+}
+.header .navbar a{
+    font-weight: 500;
+
+font-size: 17px;
+color: var(--black);
+margin: 0 .8rem;
+}
+.header .navbar a:hover{
+    color: var(--green);
+}
+.icons div{
+    font-size: 20px;
+    margin-right: 5px;
+    border: 0px solid black;
+    background-color:#eee ;
+line-height: 2.3rem;
+text-align: center;
+width: 2.3rem;
+height: 2.3rem;
+border-radius: 5px;
+    color: var(--black);
+    cursor: pointer;
+
+}
+.icons div:hover{
+    background-color: var(--green);
+    color: white;
+}
+.icons #menu-btn{
+    display: none;
+}
+.header .search-form{
+    position: absolute;
+    top: 110%;
+right: -110%;
+    background-color: white;
+    width: 22rem;
+    height: 2.8rem;
+    align-items: center;
+    line-height: 50px;
+    padding: 0 12px;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    overflow: hidden;
+
+
+}
+.header .search-form.active{
+    right: 1rem;
+    transition: .4s linear;
+}
+
+.header input{
+    width: 90%;
+    height: 90%;
+    outline: none;
+    font-size: 17px;
+    text-transform: none;
+    color: var(--black);
+}
+.header label{
+    font-size: 17px;
+    color: var(--black);
+}
+.header label:hover{
+    color: var(--green);
+}
+
+/* header :end*/
+
+/* cart :start */
+.shopping-cart{
+    top:110%;
+    position: absolute;
+    width: 18rem;
+    right: -110%;
+    background-color: white;
+    padding: 0px 10px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+.shopping-cart.active{
+    right: 1rem;
+transition: .4s linear;
+}
+.shopping-cart .box{
+    display: flex;
+    align-items: center;
+
+}
+.shopping-cart .box h3{
+    font-size: 18px;
+    color: var(--black);
+    margin-bottom: 3px;
+}
+.shopping-cart .box span{
+    font-size: 14px;
+    color: var(--black);
+}
+.shopping-cart .box img{
+    height: 5.4rem;
+    
+}
+.shopping-cart .fa-trash{
+  
+    position: absolute;
+    color: var(--light-color);
+    right: 1.2rem;
+   
+}
+.shopping-cart .fa-trash:hover{
+    color: var(--green);
+    cursor: pointer;
+}
+.shopping-cart .total{
+    color: var(--black);
+    font-size: 19px;
+    text-align: center;
+}
+.shopping-cart .btn{
+    display: block;
+    margin-bottom: 1rem;
+}
+/* form strr  */
+.login-form{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 17rem;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    padding: 7px 3.5px;
+}
+.login-form.active{
+    right: 1rem;
+    transition: .4s linear;
+}
+.login-form a{
+    text-decoration: underline;
+}
+.login-form span{
+font-size: 14px;
+color: var(--black);
+line-height: 30px;
+
+}
+.login-form input{
+    padding:  7px 5px;
+font-size: 15px;
+background-color: #eee;
+margin: .4rem 0px;
+}
+.login-form .btn{
+    margin-bottom: 1rem;
+    padding: 5px 8px;
+}
+
+
+
+
+
+
+
+/* strt media query  */
+@media (max-width:375px){
+
+
+    html{
+        font-size: 88%;
+    }
+    .header{
+      
+    padding: 1.7rem 7%;
+    display: flex;
+}
+.icons div{
+    font-size: 21px;
+    margin-right: 7px;
+    border: 0px solid black;
+    background-color:#eee ;
+line-height: 2.3rem;
+text-align: center;
+width: 2.4rem;
+height: 2.4rem;
+
+}
+.header .navbar{
+    position: absolute;
+    top: 110%;
+    right: -195px;
+    width: 13rem;
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+.header .navbar.active{
+   transition: .3s linear;
+    right: 1rem;
+   
+}
+.header .logo{
+    font-size: 20px;
+}
+.header #menu-btn{
+    display: inline-block;
+}
+.header .navbar a{
+    font-size: 17PX;
+    margin:  .9rem 1rem;
+
+    display: block;
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
